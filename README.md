@@ -1,12 +1,10 @@
 # FitPulse API
 
-Small Express + TypeScript API with sample health, Pokémon, and exercise endpoints.
+Small Express + TypeScript API with health and exercise endpoints.
 
 ## Endpoints
 
 - `GET /api/health`
-- `GET /api/pokemon`
-- `GET /api/pokemon/:id`
 - `GET /api/exercises`
 - `GET /api/exercises?bodyPart=legs`
 - `GET /api/exercises/search?q=cardio`
