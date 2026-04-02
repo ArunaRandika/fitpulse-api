@@ -1,0 +1,16 @@
+services:
+  app:
+    image: ${APP_IMAGE:-fitpulse-api}
+    container_name: fitpulse-api
+    restart: unless-stopped
+
+  nginx:
+    image: nginx:alpine
+    container_name: fitpulse-nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - app
+    restart: unless-stopped
